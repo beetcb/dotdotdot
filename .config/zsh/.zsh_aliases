@@ -1,0 +1,12 @@
+# proxychains4
+alias px='proxychains4'
+
+# ls
+# alias ls='ls --color'
+# alias l='ls -AhF --color'
+# alias ll='ls -AlhF --color'
+
+# colorls
+alias ls='colorls -h --group-directories-first -1'
+alias l='colorls --group-directories-first --almost-all'
+alias ll='colorls --group-directories-first --almost-all --long'

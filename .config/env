@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# set basic environment variables
+
+## npm
+NPM_CONFIG_USERCONFIG="/home/beet/.config/npm/config"
+
+# zsh related 
+## zplug
+export ZPLUG_HOME="/home/beet/.cache/zplug"
+## enhancd
+export ENHANCD_DIR="/home/beet/.cache/enhancd"
+## zsh
+export ZDOTDIR="/home/beet/.config/zsh"
+
+

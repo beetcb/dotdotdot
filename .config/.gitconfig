@@ -1,0 +1,7 @@
+[user]
+	name = beet
+	email = zpharno@gmail.com
+	username = beetcb
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore

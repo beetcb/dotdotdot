@@ -1,0 +1,25 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.xprofile: .xprofile
+    ~/.zshenv: .zshenv
+    ~/.xinitrc: .xinitrc
+    ~/.Xclients: .Xclients
+    ~/.profile: .profile
+
+    # apply XDG: nvim colorls npm nvim zplug zsh env .gitconfig
+    ~/.config: 
+        path: .config/*
+        glob: true
+    ~/.local: 
+        path: .local/*
+        glob: true
+
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
