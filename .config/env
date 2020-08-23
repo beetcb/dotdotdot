@@ -11,10 +11,10 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm
 
-# zsh related (zplug had been supported XDG)
+# zsh related 
 ## enhancd
-export ENHANCD_DIR="/home/beet/.cache/enhancd"
+export ENHANCD_DIR=$XDG_CACHE_HOME/enhancd
 ## zsh
-export ZDOTDIR="/home/beet/.config/zsh"
-
-
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+## zplug
+export ZPLUG_HOME=$XDG_CONFIG_HOME/zplug
