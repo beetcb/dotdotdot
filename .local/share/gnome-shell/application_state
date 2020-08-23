@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="chromium.desktop" score="352" last-seen="1598145547"/>
+    <application id="org.gnome.tweaks.desktop" score="4" last-seen="1598109827"/>
+    <application id="org.gnome.Terminal.desktop" score="429" last-seen="1598145530"/>
+  </context>
+</application-state>

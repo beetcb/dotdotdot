@@ -1,4 +1,4 @@
-call plug#begin("~/.config/vim/plugged")
+call plug#begin('~/.local/shared/nvim/plugged')
     Plug 'dracula/vim'
     Plug 'scrooloose/nerdtree'
     Plug 'ryanoasis/vim-devicons'

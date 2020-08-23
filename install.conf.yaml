@@ -2,6 +2,7 @@
     link:
       create: true
       relink: true
+      force: true
 
 - clean: ['~']
 
@@ -20,6 +21,7 @@
         path: .local/*
         glob: true
 
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+
+

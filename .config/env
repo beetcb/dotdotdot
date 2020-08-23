@@ -1,13 +1,17 @@
 #!/bin/sh
 
+# for those(os) who dont support XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 # set basic environment variables
+# npm: `npm config ls -l | grep /` > ensure env settings
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
+export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm
 
-## npm
-NPM_CONFIG_USERCONFIG="/home/beet/.config/npm/config"
-
-# zsh related 
-## zplug
-export ZPLUG_HOME="/home/beet/.cache/zplug"
+# zsh related (zplug had been supported XDG)
 ## enhancd
 export ENHANCD_DIR="/home/beet/.cache/enhancd"
 ## zsh
