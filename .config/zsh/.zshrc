@@ -10,11 +10,11 @@ PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
 
 # *ZSH: history
 SAVEHIST=100
-HISTFILE=/home/beet/.config/zsh/.zsh_history
+HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 
 # *Colorls: env
 source $(dirname $(gem which colorls))/tab_complete.sh
-export PATH=/home/beet/.gem/ruby/2.7.0/bin:$PATH
+export PATH=~/.gem/ruby/2.7.0/bin:$PATH
 
 # *ZPLUG: Plugins
 zplug "plugins/git",   from:oh-my-zsh
@@ -23,6 +23,10 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "b4b4r07/enhancd"
 zplug "plugins/vi-mode",  from:oh-my-zsh
 
+# proxy setting
+export hostIP=`grep -oP  "(\d+\.)+(\d+)" /etc/resolv.conf`
+sed -i "115c http $hostIP 7890" ~/proxychains.conf
+alias px='proxychains4'
 
 # *ZPLUG: check before install
 if ! zplug check --verbose; then
@@ -32,4 +36,3 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
-

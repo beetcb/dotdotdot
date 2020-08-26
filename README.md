@@ -2,7 +2,7 @@
 
 ### Distribution
 
-manjaro-GNOME
+Artix-linux
 GNOME-theme: Juno
 GNOME-icon: Flatery-Dark
 

@@ -2,15 +2,11 @@
     link:
       create: true
       relink: true
-      force: true
 
 - clean: ["~"]
 
 - link:
-    ~/.xprofile: .xprofile
     ~/.zshenv: .zshenv
-    ~/.xinitrc: .xinitrc
-    ~/.Xclients: .Xclients
     ~/.profile: .profile
 
     # apply XDG: nvim colorls npm nvim zplug zsh env .gitconfig
