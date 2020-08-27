@@ -1,5 +1,5 @@
 # proxychains4
-alias px='proxychains4'
+alias px='proxychains4 $1 -f ~/proxychains.conf'
 
 # ls
 # alias ls='ls --color'
@@ -10,3 +10,17 @@ alias px='proxychains4'
 alias ls='colorls -h --group-directories-first -1'
 alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
+
+###################  WSL  ##################
+if [[ $(uname -r) == *microsoft* ]]; then
+  # powershell 
+  alias wps="powershell.exe"
+  alias adb="wps abd"
+  alias scoop="wps scoop"
+
+  # launch vscode(windows)
+  code() {
+    powershell.exe code $(wslpath -w $1) 2>/dev/null
+    echo "launching vs code 👌"
+  }
+fi

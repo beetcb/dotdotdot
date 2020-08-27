@@ -3,7 +3,7 @@ call plug#begin('~/.local/shared/nvim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'ryanoasis/vim-devicons'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'prettier/vim-prettier', { 'do': 'npm i -g' }
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -71,4 +71,3 @@ function! OpenZsh()
 endfunction
 nnoremap <c-n> :call OpenZsh()<CR>
 tnoremap <Esc> <C-\><C-n>
-
