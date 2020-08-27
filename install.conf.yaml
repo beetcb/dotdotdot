@@ -13,9 +13,10 @@
     ~/.config:
       path: .config/*
       glob: true
-    ~/.local:
-      path: .local/*
-      glob: true
+      
+    ~/FiddlingScript:
+      path: FiddlingScript
+      glog: true
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

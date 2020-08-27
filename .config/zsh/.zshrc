@@ -1,3 +1,5 @@
+#!/bin/sh
+
 source $XDG_CONFIG_HOME/zplug/init.zsh
 
 # *PURE: as zsh theme
@@ -25,7 +27,7 @@ zplug "plugins/vi-mode",  from:oh-my-zsh
 
 # proxy setting
 export hostIP=`grep -oP  "(\d+\.)+(\d+)" /etc/resolv.conf`
-sed -i "115c http $hostIP 7890" ~/proxychains.conf
+sed -i "115c http $hostIP 7890" $XDG_CONFIG_HOME/proxychains/proxychains.conf
 alias px='proxychains4'
 
 # *ZPLUG: check before install
