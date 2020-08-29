@@ -26,6 +26,16 @@ if [[ $(uname -r) == *microsoft* ]]; then
     powershell.exe code $(wslpath -w $1) 2>/dev/null
     echo "launching vs code 👌"
   }
+
+  # mount d e f 
+  mountx()
+  {
+    for disk in d e f
+    do
+      sudo mount -t drvfs $disk: /mnt/$disk
+      [ "$?" -eq "0" ] && echo "$disk was mounted 👌"
+    done
+  }
 fi
 
 # load my own script
