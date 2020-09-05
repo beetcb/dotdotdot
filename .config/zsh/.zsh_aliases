@@ -48,7 +48,7 @@ fsload()
     echo "loading your script: fs$line 🙌"
     alias "fs$line"="zsh $DIR/$line"
   done < log
-  rm -f log
+  rm -rf log
 
   echo "done ! 👏 "
 }
