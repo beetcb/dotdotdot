@@ -84,7 +84,7 @@ fsload()
 }
 ```
 
-### addition (for China mainland environment)
+### ~~addition (for China mainland environment)~~ => discarded
 
 - /etc/pacman.conf
 
