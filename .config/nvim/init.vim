@@ -1,7 +1,6 @@
 if exists('g:vscode')
 
   call plug#begin('~/.local/shared/nvim/plugged')
-      Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
   call plug#end()
 
   """""""""""""""""""""""""""""""""""""""""""""
@@ -56,6 +55,7 @@ else
       Plug 'ryanoasis/vim-devicons'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+      Plug 'sheerun/vim-polyglot'
   call plug#end()
 
   """""""""""""""""""""""""""""""""""""""""""""
