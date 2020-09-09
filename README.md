@@ -53,6 +53,7 @@ if [[ $(uname -r) == *microsoft* ]]; then
   alias wps="powershell.exe"
   alias adb="wps abd"
   alias scoop="wps scoop"
+  # ...
 
   # launch vscode(windows) => Abandon vscode wsl plugin
   code()
