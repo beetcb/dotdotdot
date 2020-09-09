@@ -78,7 +78,7 @@ else
   let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-highlight']
 
   " fake browser for wsl
-  "let xxx='wslview'
+  " let g:mkdp_browser='wslview' 
 
   " Automaticaly close nvim if NERDTree is only thing left open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
