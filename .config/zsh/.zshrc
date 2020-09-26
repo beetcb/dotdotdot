@@ -7,6 +7,7 @@ autoload -U promptinit; promptinit
 prompt pure
 PROMPT='%(?.%F{magenta}△.%F{red}▲)%f '
 
+
 # *ZSH: separate alias 
 [ -f $XDG_CONFIG_HOME/zsh/.zsh_aliases ] && . $XDG_CONFIG_HOME/zsh/.zsh_aliases
 
