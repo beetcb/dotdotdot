@@ -27,9 +27,9 @@ zplug "b4b4r07/enhancd"
 zplug "plugins/vi-mode",  from:oh-my-zsh
 
 # proxy setting
-export hostIP=`grep -oP  "(\d+\.)+(\d+)" /etc/resolv.conf`
-sed -i "115c http $hostIP 7890" $XDG_CONFIG_HOME/proxychains/proxychains.conf
-alias px='proxychains4'
+# export hostIP=`grep -oP  "(\d+\.)+(\d+)" /etc/resolv.conf`
+# sed -i "115c http $hostIP 7890" $XDG_CONFIG_HOME/proxychains/proxychains.conf
+# alias px='proxychains4'
 
 # *ZPLUG: check before install
 if ! zplug check --verbose; then
