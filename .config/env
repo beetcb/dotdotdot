@@ -21,5 +21,3 @@ export ZPLUG_HOME=$XDG_CONFIG_HOME/zplug
 
 # proxychains config 
 export PROXYCHAINS_CONF_FILE=$XDG_CONFIG_HOME/proxychains/proxychains.conf
-
-export DT=/mnt/c/Users/be/Desktop/

@@ -8,7 +8,7 @@
 
 - link:
     ~/.zshenv: .zshenv
-    ~/.profile: .profile
+    ~/.xprofile: .xprofile
 
     # apply XDG: nvim colorls npm nvim zplug zsh env .gitconfig
     ~/.config:
