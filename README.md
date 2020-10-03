@@ -91,7 +91,6 @@ fsload()
 
 ```shell
 [archlinuxcn]
-SigLevel = Never
 Include = /etc/pacman.d/archlinuxcn
 ```
 
