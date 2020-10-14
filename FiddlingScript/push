@@ -1,18 +1,10 @@
 #!/bin/sh
-
-# get utility set 
-if test -f $HOME/bin/ali
+if [ "$PWD" = "/home/beet/repo/beets-blog" ]
 then
-else 
-  mkdir $HOME/bin
-  wget -O ali -P $_ "http://gosspublic.alicdn.com/ossutil/1.6.18/ossutil64?spm=a2c4g.11186623.2.12.b76f5ba1uhkzpT"
-  chmod +x ali
+    for i in $(find dist -type f | sed -r 's/dist(.+)$/\1/')
+    do 
+      node /home/beet/oss/oss-sdk.js $i 'blog'
+    done
+else
+    node /home/beet/oss/oss-sdk.js $1
 fi
-
-# check configuration
-[ ! -f $HOME/.ossutilconfig ] &&
-  ali config
-
-# push ALI oss
-[ -d dist ] &&
-  ali cp -rf dist oss://beetsblog
