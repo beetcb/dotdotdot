@@ -3,8 +3,11 @@ if [ "$PWD" = "/home/beet/repo/beets-blog" ]
 then
     for i in $(find dist -type f | sed -r 's/dist(.+)$/\1/')
     do 
-      node /home/beet/oss/oss-sdk.js $i 'blog'
+      # handle upload asynchronously
+      node /home/beet/oss/oss-sdk.js $i 'blog' &
     done
+    wait
+    echo "🎉 successfully uploaded"
 else
     node /home/beet/oss/oss-sdk.js $1
 fi
