@@ -1,12 +1,9 @@
 #!/bin/sh
 
+alias vim='nvim'
+
 # proxychains4
 alias px='proxychains'
-
-# ls
-# alias ls='ls --color'
-# alias l='ls -AhF --color'
-# alias ll='ls -AlhF --color'
 
 # colorls
 alias ls='colorls -h --group-directories-first -1'
