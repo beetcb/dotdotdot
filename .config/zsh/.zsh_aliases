@@ -12,7 +12,7 @@ alias ll='colorls --group-directories-first --almost-all --long'
 
 ###################  WSL  ##################
 if [[ $(uname -r) == *microsoft* ]]; then
-  # powershell 
+  # powershell
   alias wps="powershell.exe"
   alias adb="wps adb"
   alias fastboot="wps fastboot"
@@ -21,33 +21,29 @@ if [[ $(uname -r) == *microsoft* ]]; then
   alias scoop="wps scoop"
 
   # launch vscode(windows)
-  code() 
-  {
+  code() {
     powershell.exe code $(wslpath -w $1) 2>/dev/null
     echo "launching vs code 👌"
   }
 
-  # mount d e f 
-  mountx()
-  {
-    for disk in d e f
-    do
+  # mount d e f
+  mountx() {
+    for disk in d e f; do
       sudo mount -t drvfs $disk: /mnt/$disk
       [ "$?" -eq "0" ] && echo "$disk was mounted 👌"
     done
   }
 fi
 
-# load my own script
-fsload() 
-{
+# load my own scripts
+fsload() {
   DIR=$HOME/FiddlingScript
 
-  \ls -1 $DIR > log
+  \ls -1 $DIR >log
   while IFS= read -r line; do
     echo "loading your script: fs$line 🙌"
     alias "fs$line"="zsh $DIR/$line"
-  done < log
+  done <log
   rm -rf log
 
   echo "done ! 👏 "
