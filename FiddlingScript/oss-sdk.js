@@ -26,7 +26,7 @@ async function put(e) {
       console.log(e);
     }
   } else {
-    if (!e)
+    if (e)
       return console.log(
         "Please specify which file Object to upload(with arguments[3])"
       );
