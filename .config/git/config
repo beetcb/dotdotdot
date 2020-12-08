@@ -2,6 +2,7 @@
 	name = beet
 	email = 63141491+beetcb@users.noreply.github.com
 	username = beetcb
+	signingkey = 11528CFBDD634209
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
