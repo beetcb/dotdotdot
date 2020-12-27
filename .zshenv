@@ -1,5 +1,5 @@
 #!/bin/zsh
 # loading environment variable 
-. "$HOME/.config/env"
+source "$HOME/.config/env"
 
 export PATH=$PATH:$HOME/bin

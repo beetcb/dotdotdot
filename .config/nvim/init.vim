@@ -56,6 +56,7 @@ else
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
       Plug 'sheerun/vim-polyglot'
+      Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   call plug#end()
 
   """""""""""""""""""""""""""""""""""""""""""""

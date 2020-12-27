@@ -39,12 +39,12 @@ fi
 fsload() {
   DIR=$HOME/FiddlingScript
 
-  \ls -1 $DIR >log
+  \ls -1 $DIR >~/.log
   while IFS= read -r line; do
     echo "loading your script: fs$line 🙌"
     alias "fs$line"="zsh $DIR/$line"
-  done <log
-  rm -rf log
+  done <~/.log
+  rm -rf ~/.log
 
   echo "done ! 👏 "
 }
