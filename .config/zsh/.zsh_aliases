@@ -3,7 +3,7 @@
 alias vim='nvim'
 
 # proxychains4
-alias px='proxychains'
+alias px='proxychains -q'
 
 # colorls
 alias ls='colorls -h --group-directories-first -1'

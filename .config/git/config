@@ -5,6 +5,6 @@
 	signingkey = 11528CFBDD634209
 [core]
 	editor = nvim
-	excludesfile = ~/.gitignore
+	excludesfile = /home/beet/.gitignore_global
 [pull]
 	rebase = false
