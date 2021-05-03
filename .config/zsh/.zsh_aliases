@@ -5,11 +5,6 @@ alias vim='nvim'
 # proxychains4
 alias px='proxychains -q'
 
-# colorls
-alias ls='colorls -h --group-directories-first -1'
-alias l='colorls --group-directories-first --almost-all'
-alias ll='colorls --group-directories-first --almost-all --long'
-
 ###################  WSL  ##################
 if [[ $(uname -r) == *microsoft* ]]; then
   # powershell
@@ -19,13 +14,8 @@ if [[ $(uname -r) == *microsoft* ]]; then
   alias shutdown="wps Stop-Computer"
   alias reboot="wps Restart-Computer"
   alias scoop="wps scoop"
-
-  # launch vscode(windows)
-  code() {
-    powershell.exe code $(wslpath -w $1) 2>/dev/null
-    echo "launching vs code 👌"
-  }
-
+  alias choco="wps sudo choco"
+  
   # mount d e f
   mountx() {
     for disk in d e f; do
@@ -36,13 +26,13 @@ if [[ $(uname -r) == *microsoft* ]]; then
 fi
 
 # load my own scripts
-fsload() {
+sload() {
   DIR=$HOME/FiddlingScript
 
   \ls -1 $DIR >~/.log
   while IFS= read -r line; do
-    echo "loading your script: fs$line 🙌"
-    alias "fs$line"="zsh $DIR/$line"
+    echo "loading your script: s$line 🙌"
+    alias "s$line"="zsh $DIR/$line"
   done <~/.log
   rm -rf ~/.log
 

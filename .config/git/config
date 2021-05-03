@@ -1,10 +1,12 @@
 [user]
-	name = beet
+	name = beetcb
 	email = 63141491+beetcb@users.noreply.github.com
 	username = beetcb
-	signingkey = 11528CFBDD634209
+	signingkey = A577D88811B9B09A
 [core]
 	editor = nvim
 	excludesfile = /home/beet/.gitignore_global
 [pull]
 	rebase = false
+[commit]
+	gpgsign = true
