@@ -1,4 +1,11 @@
 #!/bin/sh
+# dprint env
+export DPRINT_INSTALL="/home/beet/.dprint"
+export PATH="$DPRINT_INSTALL/bin:$PATH"
+
+# deno env
+export DENO_INSTALL="/home/beet/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # for those(os) who dont support XDG
 export XDG_CONFIG_HOME="$HOME/.config"

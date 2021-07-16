@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+powershell.exe sudo schtasks.exe /Run /TN "\Microsoft\Windows\Servicing\StartComponentCleanup"

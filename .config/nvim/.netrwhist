@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/beet/repo/leetcode'
 let g:netrw_dirhist_8='/home/beet/.config/proxychains'
 let g:netrw_dirhist_7='/home/be/dotfiles'
 let g:netrw_dirhist_6='/home/be'

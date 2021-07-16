@@ -1,67 +1,19 @@
 if exists('g:vscode')
-
   call plug#begin('~/.local/shared/nvim/plugged')
   call plug#end()
-
-  """""""""""""""""""""""""""""""""""""""""""""
-  let g:prettier#autoformat_require_pragma = 0
-  let g:prettier#autoformat_config_present = 1
-  let g:prettier#autoformat_config_files = ['.prettierrc.yaml', '.prettierrc']
-  let g:prettier#quickfix_enabled = 0
-  let g:prettier#quickfix_enabled = 0
-  autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-
-
-  """""""""""""""""""""""""""""""""""""""""""""
-
-  syntax enable
-
-  " use space instead
-  set tabstop=2     " Size of a hard tabstop (ts).
-  set shiftwidth=2  " Size of an indentation (sw).
-  set expandtab     " Always uses spaces instead of tab characters (et).
-  set softtabstop=0 " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
-  set autoindent    " Copy indent from current line when starting a new line.
-  set smarttab      " Inserts blanks on a <Tab> key (as per sw, ts and sts).
-
-
-  " open new split panes to right and below
-  set splitright
-  set splitbelow
-
-  " show tab buffer
-  set showtabline=2
-
-  " ignore Case Matter
-  set ignorecase
-
-  " nowrap
-  " set nowrap
-
-
-  " open terminal(zsh) on ctrl+n && start terminal in insert mode && turn terminal to normal mode with escape
-  au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-  function! OpenZsh()
-      split term://zsh
-      resize 10
-  endfunction
-  nnoremap <c-n> :call OpenZsh()<CR>
-  tnoremap <Esc> <C-\><C-n>
-
 else
   call plug#begin('~/.local/shared/nvim/plugged')
-      Plug 'dracula/vim'
       Plug 'scrooloose/nerdtree'
       Plug 'ryanoasis/vim-devicons'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
-      Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+      Plug 'prettier/vim-prettier', { 'do': 'npm install' }
       Plug 'sheerun/vim-polyglot'
+      Plug 'folke/tokyonight.nvim'
       Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   call plug#end()
 
   """""""""""""""""""""""""""""""""""""""""""""
-
-  let g:dracula_colorterm = 0
+  let g:tokyonight_style = "day"
 
   let g:NERDTreeShowHidden = 1
   let g:NERDTreeMinimalUI = 1
@@ -89,7 +41,7 @@ else
   """""""""""""""""""""""""""""""""""""""""""""
 
   syntax enable
-  colorscheme dracula
+  colorscheme tokyonight
 
   " use space instead
   set tabstop=2     " Size of a hard tabstop (ts).
